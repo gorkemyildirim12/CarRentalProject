@@ -1,0 +1,18 @@
+table{
+    border-collapse: collapse;
+    background-color: white;
+    font-family: 'Alatsi', sans-serif;
+}
+tr{
+	border: 1px solid black;
+	border-style: dotted;
+}
+body{
+    background-color: gray;
+}
+h1{
+    font-family: 'Calistoga', cursive;
+}
+.car_rented{
+	padding-left: 1500px;
+}

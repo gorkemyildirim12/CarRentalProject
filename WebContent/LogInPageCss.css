@@ -1,0 +1,21 @@
+.buttons{
+    background-color: #ff5026;
+    margin: 4px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-family: Copperplate;
+    color: white;
+}
+fieldset{
+    background-color: white;
+    width: 25%;
+    height: 25%;
+    padding: 6px;
+    margin-bottom: auto;
+    position: center;
+    border:none;
+}
+.image_bmw{
+    width: 100%;
+    height: 22%;
+}

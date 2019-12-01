@@ -1,0 +1,9 @@
+img.img_done{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+p{
+	text-align: center;
+}

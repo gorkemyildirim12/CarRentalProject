@@ -1,0 +1,36 @@
+body{
+    background-image: url("car.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+fieldset{
+    background-color: black;
+    width: 25%;
+    height: 25%;
+    opacity: 0.8;
+    padding: 6px;
+    margin-bottom: auto;
+    position: center;
+    border:none;
+}
+h1 , h3 ,p{
+    font-family: "Copperplate";
+    color: white;
+    text-align: center;
+}
+.labels{
+    font-family: "Times New Roman";
+    color: white;
+    display: inline-block;
+    width: 200px;
+}
+.buttons{
+    background-color: #ff5026;
+    margin: 4px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-family: Copperplate;
+    color: white;
+}
+
