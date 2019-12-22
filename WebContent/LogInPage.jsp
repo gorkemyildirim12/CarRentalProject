@@ -38,11 +38,10 @@
 		<%=message %>
 		<form method="POST">
 			<fieldset>
-			
-				E mail: <input type="email" name="email"><br><br> 
-				Password : <input type="password" name="password"><br><br> 
-				<input type="submit" name="login" value="Login" class="buttons"><br>
-				<br> If you dont have an account please <a href="http://localhost:8080/carRentalProject/SignUpPage.jsp">Sign Up</a>
+				E mail   : 	<input type="email" name="email"><br><br> 
+				Password : 	<input type="password" name="password"><br><br> 
+				<input type="submit" name="login" value="Login" class="buttons"><br><br> 
+				If you dont have an account please <a href="http://localhost:8080/carRentalProject/SignUpPage.jsp">Sign Up</a>
 			</fieldset>
 		</form>
 

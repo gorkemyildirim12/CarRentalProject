@@ -1,3 +1,5 @@
+<%@page import="java.util.Calendar"%>
+<%@page import="org.apache.tomcat.util.digester.Digester.EnvironmentPropertySource"%>
 <%@page import="com.carRental.entity.CarRent"%>
 <%@page import="java.util.concurrent.TimeUnit"%>
 <%@page import="java.util.Date"%>
@@ -36,7 +38,6 @@
     		Date ed = formattered.parse(request.getParameter("endDate"));
     		java.sql.Date sqlDateed = new java.sql.Date(ed.getTime());
     		Date endDate = sqlDateed;
-    		
     
     		int rentDay = (int)(endDate.getTime()-startDate.getTime()) / (1000 * 60 * 60 * 24);
     		double totalAmount = car.getDailyPrice()*rentDay;
@@ -44,9 +45,14 @@
     		
     		CarRentRepository carRentRepository = new CarRentRepository();
     		boolean saved = carRentRepository.insert(carRent);
-    		
+    
     		if(saved){
-    			response.sendRedirect("CarRented.jsp");	
+    			if(endDate.getTime() < startDate.getTime()){
+        			message += "Start Date can not be after end Date";	
+        		}else{
+        			response.sendRedirect("CarRented.jsp");	
+        		}
+    			
     		}else{
     			message = "Something went wrong";
     		}
@@ -79,8 +85,9 @@
 			<img src = "<%=car.getImagePath()%>" alt = "<%=car.getCarId()%>" width="325" height =250/>
 			</td>
 			<td>
-			 	<p>Start Date : </p><input type="date" name="startDate"><br><br>
-    			<p>End Date   :</p><input type="date" name="endDate">
+				<%=message %>
+			 	<p>Start Date : </p><input type="date" name="startDate" required><br><br>
+    			<p>End Date   :</p><input type="date" name="endDate" required>
 			</td>
 			
 			<td>
